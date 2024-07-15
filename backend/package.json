@@ -1,0 +1,31 @@
+{
+  "name": "gallery-app-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/server.js",
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^5.16.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "prisma": "^5.16.2",
+    "winston": "^3.13.1"
+  },
+  "scripts": {
+    "start": "npm run create-resource-dir && node src/server.js",
+    "create-resource-dir": "(test ! -d /var/assets && sudo mkdir -p /var/assets && sudo chmod 0757 /var/assets) || true",
+    "db:generate-client": "npx prisma generate",
+    "db:generate-migration": "npx prisma migrate dev",
+    "db:migrate": "npx prisma migrate deploy",
+    "linter:prettier": "prettier .",
+    "linter:prettier-fix": "prettier --write .",
+    "linter:eslint": "eslint .",
+    "linter:eslint-fix": "eslint --fix .",
+    "linter:fix": "npm run linter:eslint-fix && npm run linter:prettier-fix"
+  },
+  "devDependencies": {
+    "eslint": "^9.7.0",
+    "eslint-plugin-prettier": "^5.1.3"
+  }
+}
