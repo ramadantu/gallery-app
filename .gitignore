@@ -1,0 +1,10 @@
+# IDE files
+.idea/
+
+# Node.js files
+backend/node_modules
+backend/.env
+
+# React.js files
+frontend/node_modules
+frontend/build
