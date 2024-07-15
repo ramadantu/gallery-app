@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IconButton, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { EditImageDialog } from './dialogs/EditImageDialog';
 
 export const ImageGallery = ({ id, images, setOnImageListChanges }) => {
@@ -12,10 +12,6 @@ export const ImageGallery = ({ id, images, setOnImageListChanges }) => {
     setActiveImageData(image);
     setOpenEditDialog(true);
   };
-
-  useEffect(() => {
-    console.log('Images: ', images);
-  }, [images]);
 
   return (
     <ImageList id={`${id}-image-list`} sx={{ width: 900, height: 450 }} cols={3}>
