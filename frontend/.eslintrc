@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "plugins": ["enforce-ids-in-jsx", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": ["jsx"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.js", "src/**/*.jsx"]
+    }
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "enforce-ids-in-jsx/missing-ids": [
+      "error",
+      {
+        "target": ["all"]
+      }
+    ],
+    "prettier/prettier": "error"
+  },
+  "extends": ["plugin:prettier/recommended"]
+}

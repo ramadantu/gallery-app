@@ -1,0 +1,13 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "printWidth": 150,
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": ["src/**/*.css"]
+    }
+  ]
+}

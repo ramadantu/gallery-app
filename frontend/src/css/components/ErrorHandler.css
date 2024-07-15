@@ -1,0 +1,3 @@
+.alert-title::first-letter {
+  text-transform: capitalize;
+}
